@@ -178,83 +178,83 @@ print(f"Sum of numbers: {numbers_sum}")`,
 //   fmt.Println("Sum of numbers:", sum)
 // }`,
 //   },
-  rust: {
-    id: "rust",
-    label: "Rust",
-    logoPath: "/rust.png",
-    pistonRuntime: { language: "rust", version: "1.68.2" },
-    monacoLanguage: "rust",
-    defaultCode: `fn main() {
-    // Create vector
-    let numbers = vec![1, 2, 3, 4, 5];
+//   rust: {
+//     id: "rust",
+//     label: "Rust",
+//     logoPath: "/rust.png",
+//     pistonRuntime: { language: "rust", version: "1.68.2" },
+//     monacoLanguage: "rust",
+//     defaultCode: `fn main() {
+//     // Create vector
+//     let numbers = vec![1, 2, 3, 4, 5];
     
-    // Print original numbers
-    println!("Original numbers: {:?}", numbers);
+//     // Print original numbers
+//     println!("Original numbers: {:?}", numbers);
     
-    // Calculate squares
-    let squares: Vec<i32> = numbers
-        .iter()
-        .map(|&n| n * n)
-        .collect();
-    println!("Squared numbers: {:?}", squares);
+//     // Calculate squares
+//     let squares: Vec<i32> = numbers
+//         .iter()
+//         .map(|&n| n * n)
+//         .collect();
+//     println!("Squared numbers: {:?}", squares);
     
-    // Filter even numbers
-    let even_numbers: Vec<i32> = numbers
-        .iter()
-        .filter(|&&n| n % 2 == 0)
-        .cloned()
-        .collect();
-    println!("Even numbers: {:?}", even_numbers);
+//     // Filter even numbers
+//     let even_numbers: Vec<i32> = numbers
+//         .iter()
+//         .filter(|&&n| n % 2 == 0)
+//         .cloned()
+//         .collect();
+//     println!("Even numbers: {:?}", even_numbers);
     
-    // Calculate sum
-    let sum: i32 = numbers.iter().sum();
-    println!("Sum of numbers: {}", sum);
-}`,
-  },
-  cpp: {
-    id: "cpp",
-    label: "C++",
-    logoPath: "/cpp.png",
-    pistonRuntime: { language: "cpp", version: "10.2.0" },
-    monacoLanguage: "cpp",
-    defaultCode: `#include <iostream>
-#include <vector>
-#include <algorithm>
-#include <numeric>
+//     // Calculate sum
+//     let sum: i32 = numbers.iter().sum();
+//     println!("Sum of numbers: {}", sum);
+// }`,
+//   },
+//   cpp: {
+//     id: "cpp",
+//     label: "C++",
+//     logoPath: "/cpp.png",
+//     pistonRuntime: { language: "cpp", version: "10.2.0" },
+//     monacoLanguage: "cpp",
+//     defaultCode: `#include <iostream>
+// #include <vector>
+// #include <algorithm>
+// #include <numeric>
 
-int main() {
-    // Create vector
-    std::vector<int> numbers = {1, 2, 3, 4, 5};
+// int main() {
+//     // Create vector
+//     std::vector<int> numbers = {1, 2, 3, 4, 5};
     
-    // Print original numbers
-    std::cout << "Original numbers: ";
-    for (int n : numbers) std::cout << n << " ";
-    std::cout << std::endl;
+//     // Print original numbers
+//     std::cout << "Original numbers: ";
+//     for (int n : numbers) std::cout << n << " ";
+//     std::cout << std::endl;
     
-    // Calculate squares
-    std::vector<int> squares;
-    std::transform(numbers.begin(), numbers.end(), 
-                  std::back_inserter(squares),
-                  [](int n) { return n * n; });
+//     // Calculate squares
+//     std::vector<int> squares;
+//     std::transform(numbers.begin(), numbers.end(), 
+//                   std::back_inserter(squares),
+//                   [](int n) { return n * n; });
     
-    std::cout << "Squared numbers: ";
-    for (int n : squares) std::cout << n << " ";
-    std::cout << std::endl;
+//     std::cout << "Squared numbers: ";
+//     for (int n : squares) std::cout << n << " ";
+//     std::cout << std::endl;
     
-    // Filter even numbers
-    std::cout << "Even numbers: ";
-    for (int n : numbers) {
-        if (n % 2 == 0) std::cout << n << " ";
-    }
-    std::cout << std::endl;
+//     // Filter even numbers
+//     std::cout << "Even numbers: ";
+//     for (int n : numbers) {
+//         if (n % 2 == 0) std::cout << n << " ";
+//     }
+//     std::cout << std::endl;
     
-    // Calculate sum
-    int sum = std::accumulate(numbers.begin(), numbers.end(), 0);
-    std::cout << "Sum of numbers: " << sum << std::endl;
+//     // Calculate sum
+//     int sum = std::accumulate(numbers.begin(), numbers.end(), 0);
+//     std::cout << "Sum of numbers: " << sum << std::endl;
     
-    return 0;
-}`,
-  },
+//     return 0;
+// }`,
+//   },
 //   csharp: {
 //     id: "csharp",
 //     label: "C#",

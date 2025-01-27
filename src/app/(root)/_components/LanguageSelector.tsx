@@ -27,7 +27,7 @@ function LanguageSelector({ hasAccess }: { hasAccess: boolean }) {
   }, []);
 
   const handleLanguageSelect = (langId: string) => {
-    if (!hasAccess && langId !== "javascript" && langId !== "typescript" && langId !== "python") return;
+    if (!hasAccess && langId !== "javascript") return;
 
     setLanguage(langId);
     setIsOpen(false);
@@ -44,7 +44,7 @@ function LanguageSelector({ hasAccess }: { hasAccess: boolean }) {
         className={`group relative flex items-center gap-3 px-4 py-2.5 bg-[#1e1e2e]/80 
       rounded-lg transition-all 
        duration-200 border border-gray-800/50 hover:border-gray-700
-       ${!hasAccess && language !== "javascript" && language !== "typescript" && language !=="java" && language !=="python" ? "opacity-50 cursor-not-allowed" : ""}`}
+       ${!hasAccess && language !== "javascript" ? "opacity-50 cursor-not-allowed" : ""}`}
       >
         {/* Decoration */}
         <div
@@ -89,7 +89,7 @@ function LanguageSelector({ hasAccess }: { hasAccess: boolean }) {
 
             <div className="max-h-[280px] overflow-y-auto overflow-x-hidden">
               {Object.values(LANGUAGE_CONFIG).map((lang, index) => {
-                const isLocked = !hasAccess && lang.id !== "javascript" && lang.id !== "typescript"  && lang.id !== "python" && lang.id !== "java" && lang.id !== "go";
+                const isLocked = !hasAccess && lang.id !== "javascript" ;
 
                 return (
                   <motion.div
